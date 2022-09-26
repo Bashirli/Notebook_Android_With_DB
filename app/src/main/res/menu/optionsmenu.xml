@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Yeni not" android:id="@+id/adddata"></item>
+<item android:title="Çıxış et" android:id="@+id/signout"></item>
+
+</menu>
