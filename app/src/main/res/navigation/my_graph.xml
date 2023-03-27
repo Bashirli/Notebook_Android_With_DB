@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.bashirli.notebook.view.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_publishFragment"
+            app:destination="@id/publishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/publishFragment"
+        android:name="com.bashirli.notebook.view.PublishFragment"
+        android:label="fragment_publish"
+        tools:layout="@layout/fragment_publish" >
+        <action
+            android:id="@+id/action_publishFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="info"
+            app:argType="string"
+             />
+        <argument
+            android:name="date"
+            app:argType="string"
+
+            android:defaultValue=""/>
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+</navigation>
